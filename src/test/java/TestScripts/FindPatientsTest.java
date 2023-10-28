@@ -3,7 +3,7 @@ package TestScripts;
 import ObjectRepository.AdminAccountPage;
 import ObjectRepository.FindPatientsPage;
 import ObjectRepository.LoginPage;
-import Resouces.Base;
+import Resources.Base;
 import org.testng.annotations.Test;
 
 public class FindPatientsTest extends Base {

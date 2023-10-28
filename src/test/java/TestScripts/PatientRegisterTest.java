@@ -3,22 +3,20 @@ package TestScripts;
 import ObjectRepository.AdminAccountPage;
 import ObjectRepository.LoginPage;
 import ObjectRepository.PatientRegisterPage;
-import Resouces.Base;
+import Resources.Base;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 public class PatientRegisterTest extends Base {
 
 
     @Test(priority = 1)
-    public void log(){
+    public void log() throws IOException {
 
-        LoginPage login = new LoginPage(driver);
-
-        login.userNameField().sendKeys("Admin");
-        login.passwordField().sendKeys("Admin123");
-        login.location().click();
-        login.loginButton().click();
+        LoginTest test = new LoginTest();
+        test.login();
 
     }
 

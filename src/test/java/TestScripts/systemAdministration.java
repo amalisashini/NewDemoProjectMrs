@@ -1,30 +1,26 @@
 package TestScripts;
 
-import Resouces.Base;
+import ObjectRepository.LoginPage;
+import Resources.Base;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 public class systemAdministration extends Base {
 
     @Test
-    public void SystemAdminTest(String username, String password){
-
-        LoginTest test = new LoginTest();
-        test.login(username, password);
+    public void SystemAdminTest() {
 
 
-    }
+        LoginPage login = new LoginPage(driver);
 
-    @DataProvider
-    public Object[][] userCredentialsData(){
-
-        Object[][] data = new Object[1][2];
-
-        data[0][0] = "Admin";
-        data[0][1] = "Admin123";
-
-        return data;
+        login.userNameField().sendKeys("Admin");
+        login.passwordField().sendKeys("Admin123");
+        login.location().click();
+        login.loginButton().click();
 
     }
+
 
 }

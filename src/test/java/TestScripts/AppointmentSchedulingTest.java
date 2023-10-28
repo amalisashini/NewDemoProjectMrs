@@ -4,7 +4,7 @@ import ObjectRepository.AdminAccountPage;
 import ObjectRepository.AppointmentSchedulingPage;
 import ObjectRepository.LoginPage;
 import ObjectRepository.ManageServiceTypesPage;
-import Resouces.Base;
+import Resources.Base;
 import org.testng.annotations.Test;
 
 public class AppointmentSchedulingTest extends Base {
