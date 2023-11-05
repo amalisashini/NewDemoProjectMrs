@@ -6,12 +6,12 @@
 
     <test verbose="2" preserve-order="true" name="C:/eclipse/NewApplicationTest">
         <classes>
-            <class name="TestScripts.systemAdministration"/>
-<!--            <class name="TestScripts.AppointmentSchedulingTest">-->
-<!--                <methods>-->
-<!--                    <exclude name="scheduleAppointment"></exclude>-->
-<!--                </methods>-->
-<!--            </class>-->
+
+            <class name="TestScripts.AppointmentSchedulingTest">
+                <methods>
+                    <exclude name="scheduleAppointment"></exclude>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

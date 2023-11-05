@@ -15,8 +15,12 @@ public class PatientRegisterTest extends Base {
     @Test(priority = 1)
     public void log() throws IOException {
 
-        LoginTest test = new LoginTest();
-        test.login();
+        LoginPage login = new LoginPage(driver);
+
+        login.userNameField().sendKeys("Admin");
+        login.passwordField().sendKeys("Admin123");
+        login.location().click();
+        login.loginButton().click();
 
     }
 
@@ -28,6 +32,8 @@ public class PatientRegisterTest extends Base {
         adminAccount.patientRegister().click();
 
         PatientRegisterPage patientReg = new PatientRegisterPage(driver);
+
+        Thread.sleep(6000);
 
         patientReg.givenName().sendKeys("Chathura");
         patientReg.middleName().sendKeys("bandara");

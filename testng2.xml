@@ -10,7 +10,7 @@
 
     <test name="C:/eclipse/NewApplicationTest">
         <classes>
-            <class name="TestScripts.AppointmentSchedulingTest"/>
+            <class name="TestScripts.FindPatientsTest"/>
         </classes>
     </test>
 </suite>
